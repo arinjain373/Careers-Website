@@ -11,6 +11,7 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
 
@@ -18,14 +19,22 @@
   </head>
   
   <body>
+    {% include 'nav.html' %}
+    <img class = "img-fluid" id="banner" src = "static/banner.jpg"></Img>
     <div class = "container">
       <h1 class = "text-center mt-2 mb-4" > MANIT CAREERS</h1>
-      <img class = "img-fluid" id="banner" src = "static/banner.jpg"></Img>
-      <h2 class = "text-center mt-2 mb-4"> About Manit</h2>
+
+      <div class = "row" style = "margin-bottom:16px">
+        <div class = "col-md-6">
       <p class = "lead"> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tempus lorem in posuere. Proin imperdiet at libero vel dignissim. Donec semper risus nec diam cursus pellentesque. Nam fringilla vitae odio eu scelerisque. Aliquam dignissim mollis tincidunt. Nullam condimentum scelerisque diam, et consectetur est tincidunt eget. Ut ullamcorper risus luctus, efficitur leo ut, ultrices neque. Phasellus vestibulum nisi magna, sit amet pulvinar tortor finibus et. Integer id placerat nibh. Sed at lacus fringilla, semper nibh at, faucibus velit. Aliquam scelerisque, dolor nec interdum pretium, est nibh molestie ante, a bibendum sem augue in est. Fusce id est vel risus fermentum porttitor. Nullam tempus sodales neque, at ornare urna mattis at.
       </p>
-  
+        </div>
+        <div class = "d-none d-md-block col-md-6">
+        <img src = "static/people.jpg" style = "height:320px; border-radius:4px;">
+        </div>  
+      </div>
+      
       <h2 class = "text-center mt-2 mb-4" >Job Opening</h2>
 
       
@@ -37,10 +46,12 @@
 
       
       <div class="text-center">  
-        <button class = "btn btn-primary btn-lg""> Contact Us</button>
-        <p class = "mt-4">Copyright 2024,MANIT</p>
+        <a href="mailto:arinjain789@gmail.com?subject=Question%20about%20Job%20Opening&body=My%20name%20%3A%20%3Cyour%20name%3E%0A%0AMy%20question%3A%20%3Cquestion%3E%0A" class = "btn btn-primary btn-lg""> Contact Us</a>
+        
       </div>
     </div>
+
+    {% include 'footer.html' %}
   </body>
 
 </html>
